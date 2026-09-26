@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MenteeLog - Portal Login & Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="auth-card">
+    <div class="logo">
+      <h2>MenteeLog</h2>
+      <p>OJT Management System</p>
+    </div>
+
+    <!-- Login Form -->
+    <form class="auth-form" id="loginForm">
+      <h3>Sign In to Your Account</h3>
+      
+      <div class="input-group">
+        <label for="email">Email / ID Number</label>
+        <input type="text" id="email" placeholder="e.g. 21-12345 or user@email.com" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+
+      <button type="submit" class="btn-primary">Sign In</button>
+      <p class="toggle-text">Don't have an account? <a href="#" id="showSignup">Sign Up</a></p>
+    </form>
+
+    <!-- Sign Up Form (Hidden by default) -->
+    <form class="auth-form hidden" id="signupForm">
+      <h3>Create an Account</h3>
+
+      <div class="input-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="e.g. Juan Cruz" required>
+      </div>
+
+      <div class="input-group">
+        <label for="signupEmail">Email Address</label>
+        <input type="email" id="signupEmail" placeholder="user@email.com" required>
+      </div>
+
+      <div class="input-group">
+        <label for="signupPassword">Password</label>
+        <input type="password" id="signupPassword" placeholder="Create a password" required>
+      </div>
+
+      <button type="submit" class="btn-primary">Sign Up</button>
+      <p class="toggle-text">Already have an account? <a href="#" id="showLogin">Sign In</a></p>
+    </form>
+  </div>
+
+  <script>
+    // Simple script to toggle between Login and Sign Up
+    const loginForm = document.getElementById('loginForm');
+    const signupForm = document.getElementById('signupForm');
+    const showSignup = document.getElementById('showSignup');
+    const showLogin = document.getElementById('showLogin');
+
+    showSignup.addEventListener('click', (e) => {
+      e.preventDefault();
+      loginForm.classList.add('hidden');
+      signupForm.classList.remove('hidden');
+    });
+
+    showLogin.addEventListener('click', (e) => {
+      e.preventDefault();
+      signupForm.classList.add('hidden');
+      loginForm.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>s
