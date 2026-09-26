@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #abc6ed;
+  background-color: #0c336a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +14,7 @@ body {
 }
 
 .auth-card {
-  background-color: #eeb1b1;
+  background-color: #f14545;
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
